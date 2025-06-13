@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovaSmart Pro - La Revolución en Confort</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/producto.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="NaturaSilla" height="40">
+                <span class="ms-2 brand-text">MovaSmart</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('producto') }}">Producto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('beneficios') }}">Beneficios</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light" href="{{ url_for('reservar') }}">Reservar ahora</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="product-hero">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6 text-white">
+                    <h1 class="display-3 fw-bold mb-4">MovaSmart <span class="text-warning">Pro</span></h1>
+                    <p class="lead mb-5">La primera silla inteligente con tecnología de biomecánica avanzada</p>
+                    <div class="d-flex gap-3">
+                        <a href="#features" class="btn btn-light btn-lg px-4">Características</a>
+                        <a href="#comprar" class="btn btn-outline-light btn-lg px-4">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Inteligencia Artificial</h4>
+                    <p>Aprende de tus movimientos y se adapta automáticamente</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Materiales Ecológicos</h4>
+                    <p>Fabricada con bambú y materiales 100% reciclables</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h4>Salud Integral</h4>
+                    <p>Monitoriza tu postura y actividad para mejorar tu bienestar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="product-viewer">
+                        <img src="{{ url_for('static', filename='img/producto-360-1.jpg') }}" alt="Vista 360° NaturaSilla" class="img-fluid active" id="main-product-image">
+                        <div class="thumbnail-container mt-3">
+                            <img src="{{ url_for('static', filename='img/producto-360-1.jpg') }}" alt="Vista frontal" class="thumbnail active">
+                            <img src="{{ url_for('static', filename='img/producto-360-2.jpg') }}" alt="Vista lateral" class="thumbnail">
+                            <img src="{{ url_for('static', filename='img/producto-360-3.jpg') }}" alt="Vista posterior" class="thumbnail">
+                            <img src="{{ url_for('static', filename='img/producto-angle.jpg') }}" alt="Vista angular" class="thumbnail">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Tecnología que Cuida de Ti</h2>
+                    <div class="feature-list mb-5">
+                        <div class="feature-item">
+                            <div class="feature-number">01</div>
+                            <div>
+                                <h5>Sensores Biométricos</h5>
+                                <p>14 sensores estratégicamente ubicados analizan tu postura en tiempo real</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-number">02</div>
+                            <div>
+                                <h5>Sistema de Balanceo Inteligente</h5>
+                                <p>3 modos de movimiento que imitan el balanceo natural del cuerpo</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-number">03</div>
+                            <div>
+                                <h5>App MovaSmart</h5>
+                                <p>Control total desde tu smartphone con estadísticas de uso y salud</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="specs-box p-4 bg-light rounded">
+                        <h5 class="mb-3">Especificaciones Técnicas</h5>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <small class="text-muted d-block">Materiales</small>
+                                <strong>Bambú, Algodón Orgánico</strong>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <small class="text-muted d-block">Peso Máximo</small>
+                                <strong>150 kg</strong>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <small class="text-muted d-block">Dimensiones</small>
+                                <strong>65 x 68 x 110 cm</strong>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <small class="text-muted d-block">Garantía</small>
+                                <strong>5 años</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Innovación en Cada Detalle</h2>
+                <p class="lead">Descubre la tecnología detrás de MovaSmart Pro</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-card p-4 h-100">
+                        <div class="tech-icon mb-4">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4>CPU Quantum</h4>
+                        <p>Procesador de última generación para análisis en tiempo real</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-card p-4 h-100">
+                        <div class="tech-icon mb-4">
+                            <i class="fas fa-bluetooth-b"></i>
+                        </div>
+                        <h4>Conectividad 5.3</h4>
+                        <p>Bluetooth de baja energía para máxima eficiencia</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-card p-4 h-100">
+                        <div class="tech-icon mb-4">
+                            <i class="fas fa-battery-full"></i>
+                        </div>
+                        <h4>Batería Solar</h4>
+                        <p>Autonomía de 6 meses con carga solar integrada</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-card p-4 h-100">
+                        <div class="tech-icon mb-4">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>Cloud Sync</h4>
+                        <p>Sincronización con la nube para seguimiento histórico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comprar" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <img src="{{ url_for('static', filename='img/producto-features.jpg') }}" alt="NaturaSilla Pro Features" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-7">
+                    <div class="ps-lg-5">
+                        <h2 class="fw-bold mb-4">Personaliza tu MovaSmart Pro</h2>
+                        <div class="mb-4">
+                            <h5 class="mb-3">Color del Acabado</h5>
+                            <div class="color-options d-flex gap-3">
+                                <button class="color-option active" data-color="natural" style="background-color: #d2b48c;"></button>
+                                <button class="color-option" data-color="carbon" style="background-color: #333;"></button>
+                                <button class="color-option" data-color="blanco" style="background-color: #f5f5f5;"></button>
+                                <button class="color-option" data-color="nogal" style="background-color: #5e2c04;"></button>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h5 class="mb-3">Material del Asiento</h5>
+                            <select class="form-select">
+                                <option>Algodón Orgánico (Standard)</option>
+                                <option>Lino Ecológico Premium</option>
+                                <option>Cuero Vegetal</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <h5 class="mb-3">Paquete de Tecnología</h5>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="techPackage" id="basicTech" checked>
+                                <label class="form-check-label" for="basicTech">
+                                    Basic - Sensores posturales ($1,299)
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="techPackage" id="proTech">
+                                <label class="form-check-label" for="proTech">
+                                    Pro - + Monitoreo cardíaco ($1,599)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="techPackage" id="ultimateTech">
+                                <label class="form-check-label" for="ultimateTech">
+                                    Ultimate - Todos los features ($1,999)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <button class="btn btn-outline-secondary px-3" id="decrement">-</button>
+                            <input type="number" value="1" min="1" class="form-control text-center mx-2" style="max-width: 70px;">
+                            <button class="btn btn-outline-secondary px-3" id="increment">+</button>
+                            <a href="{{ url_for('checkout') }}" class="btn btn-success ms-auto px-4">
+    <i class="fas fa-shopping-cart me-2"></i> Comprar ahora
+</a>
+                        </div>
+                        <div class="alert alert-success">
+                            <div class="d-flex">
+                                <i class="fas fa-truck me-3 mt-1"></i>
+                                <div>
+                                    <strong>Envío gratis</strong> en pedidos superiores a $1,000. 
+                                    <span class="d-block text-muted small">Entrega estimada 5-7 días hábiles.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Opiniones de Expertos</h2>
+                <p class="lead">Lo que dicen los profesionales sobre MovaSmart</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Ergónoma" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h6 class="mb-0">Dra. Laura Méndez</h6>
+                                <small class="text-muted">Ergónoma Clínica</small>
+                            </div>
+                        </div>
+                        <p>"La MovaSmart ha revolucionado nuestro enfoque en terapia postural. Los pacientes reportan un 70% menos de dolor lumbar."</p>
+                        <div class="rating text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Diseñador" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h6 class="mb-0">Carlos Fuentes</h6>
+                                <small class="text-muted">Diseñador Industrial</small>
+                            </div>
+                        </div>
+                        <p>"El equilibrio entre estética y funcionalidad es perfecto. Un ejemplo de diseño centrado en el usuario."</p>
+                        <div class="rating text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="CEO" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h6 class="mb-0">Ana Rodríguez</h6>
+                                <small class="text-muted">CEO TecnoSalud</small>
+                            </div>
+                        </div>
+                        <p>"Hemos equipado todas nuestras oficinas con MovaSmart. La productividad aumentó un 20% y las bajas por dolor disminuyeron."</p>
+                        <div class="rating text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Preguntas Frecuentes</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border-0">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    ¿Cuál es el tiempo de entrega?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    El tiempo de entrega estándar es de 5-7 días hábiles. Para pedidos personalizados puede extenderse hasta 10 días.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    ¿Requiere instalación?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No, MovaSmart viene completamente ensamblada. Solo necesita desempacarla y conectar la batería.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    ¿Es compatible con todos los smartphones?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    La app MovaSmart es compatible con iOS 12+ y Android 8+. Requiere Bluetooth 4.0 o superior.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="contact-box p-5 bg-light rounded h-100">
+                        <h3 class="fw-bold mb-4">¿Necesitas ayuda?</h3>
+                        <p class="mb-4">Nuestro equipo de expertos está listo para responder tus preguntas.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Tu mensaje"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success">Enviar consulta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4">
+                        <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="NaturaSilla" height="30" class="me-2">
+                        MovaSmart
+                    </h5>
+                    <p>Innovación en confort y salud postural para el mundo moderno.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="mb-4">Producto</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Características</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Especificaciones</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Accesorios</a></li>
+                        <li><a href="#" class="text-white-50">App Móvil</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="mb-4">Soporte</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Centro de ayuda</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Garantía</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">FAQ</a></li>
+                        <li><a href="#" class="text-white-50">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="mb-4">Newsletter</h6>
+                    <p class="small text-white-50 mb-3">Suscríbete para recibir actualizaciones y ofertas especiales.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Tu email">
+                            <button class="btn btn-success" type="submit">Suscribir</button>
+                        </div>
+                    </form>
+                    <p class="small text-white-50 mb-0">
+                        <i class="fas fa-lock me-2"></i> Respetamos tu privacidad
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2023 MovaSmart. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="small text-white-50 me-3">Términos</a>
+                    <a href="#" class="small text-white-50 me-3">Privacidad</a>
+                    <a href="#" class="small text-white-50">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/producto.js') }}"></script>
+</body>
+</html>

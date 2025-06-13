@@ -1,0 +1,57 @@
+/* Estilo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navbar personalizado */
+.navbar-custom {
+    background-color: #ffffff !important; /* Fondo blanco */
+    border-bottom: 2px solid #28a745;      /* Línea verde abajo */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #222 !important;                /* Texto oscuro */
+    font-weight: 500;
+}
+
+.navbar-custom .navbar-brand span {
+    color: #28a745 !important;             /* Verde para el nombre */
+}
+
+/* Al hacer hover */
+.navbar-custom .nav-link:hover {
+    color: #28a745 !important;
+}
+
+/* Cambiar botón de hamburguesa (colapsado) */
+.navbar-toggler {
+    border-color: #28a745;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(40,167,69, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Secciones */
+.hero-section, #producto, #beneficios {
+    padding-top: 80px;  /* Separación de la barra al inicio de cada sección */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Botones */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}

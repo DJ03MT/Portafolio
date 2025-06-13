@@ -1,0 +1,158 @@
+:root {
+    --primary: #28a745;
+    --primary-dark: #218838;
+    --secondary: #f8f9fa;
+    --dark: #343a40;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+}
+
+/* Tipografía */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Hero Section */
+.product-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/producto-angle.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Features */
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Product Viewer */
+.product-viewer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.thumbnail:hover, .thumbnail.active {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* Feature List */
+.feature-list {
+    border-left: 3px solid var(--primary);
+    padding-left: 20px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.feature-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-top: -5px;
+}
+
+/* Tech Cards */
+.tech-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+/* Color Options */
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.color-option:hover, .color-option.active {
+    border-color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.rating {
+    font-size: 0.9rem;
+}
+
+/* Contact Box */
+.contact-box {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-hero {
+        height: 60vh;
+        text-align: center;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .feature-number {
+        margin-bottom: 10px;
+    }
+}
